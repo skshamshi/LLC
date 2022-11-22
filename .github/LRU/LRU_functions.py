@@ -65,7 +65,6 @@ def main():
     ca.refer(5)
     ca.display()
 
-# This code is contributed by Satish Srinivas
 
 if __name__ == "__main__":
     main()
