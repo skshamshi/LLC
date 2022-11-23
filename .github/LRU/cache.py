@@ -9,6 +9,8 @@ cache =[['x' for i in range (associativity)] for k in range(total_lines)]
 #pprint.pprint(cache)
 cache[3][6] = 0x000032AC
 pprint.pprint(cache)
-
-cache.pop(5)
-pprint.pprint(cache)
+addr=0x000032AD
+arr = [[[] for i in range(8)] for j in range(6)]
+pprint.pprint(arr)
+arr [3][4]=addr
+pprint.pprint(arr)
