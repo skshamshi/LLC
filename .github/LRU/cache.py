@@ -9,3 +9,6 @@ cache =[['x' for i in range (associativity)] for k in range(total_lines)]
 #pprint.pprint(cache)
 cache[3][6] = 0x000032AC
 pprint.pprint(cache)
+
+cache.pop(5)
+pprint.pprint(cache)
