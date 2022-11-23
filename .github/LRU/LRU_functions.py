@@ -48,7 +48,7 @@ class LRUCache:
         # Iterate in the deque and print
         # all the elements in it
         for it in self._dq:
-            print((*it), end = '')
+            print((it), end = '')
             print(" ", end = '')
 
         print("\n", end = '')
