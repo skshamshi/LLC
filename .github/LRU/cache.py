@@ -14,3 +14,5 @@ arr = [[[] for i in range(8)] for j in range(6)]
 pprint.pprint(arr)
 arr [3][4]=addr
 pprint.pprint(arr)
+arr.insert(([4][1]),0x0000DFE6)
+pprint.pprint(arr)
