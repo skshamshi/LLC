@@ -1,7 +1,7 @@
 import pprint
 col, row = (5, 5)
 arr = [[1]*col]*row
-print(arr)
+#print(arr)
 
 associativity=8
 total_lines=6
@@ -13,4 +13,4 @@ addr=0x000032AD
 arr = [[[] for i in range(8)] for j in range(6)]
 pprint.pprint(arr)
 arr [3][4]=addr
-pprint.pprint(arr)
+#pprint.pprint(arr)
