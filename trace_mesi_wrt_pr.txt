@@ -1,0 +1,10 @@
+0 45ADFC0 # state changes from invalid to exclusive
+0 45ADFC0 # stays in exclusive
+1 45ADFD1 # state changes to modified
+1 45ADFF3 # stays in modified
+0 45ADFF3 # stays in modified
+0 45ADFB3 # state of second index changes to invalid
+0 45ADFB1 # invalid to shared as snopped result is hit
+0 45ADFB1 # stays in shared
+1 45ADFA2 # changes to modified and bus operation is invalidate
+1 D38DF301 # state changes from invalid to modified, bus operation is RWIM
