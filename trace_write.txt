@@ -1,0 +1,3 @@
+0 0x47DA30; # read miss, L2-L1: write line
+0 0x47DA30 # read hit, L2-L1: write line
+2 0x047F5A23 #same index, diff tag and byte offset, write miss , bus rd,
