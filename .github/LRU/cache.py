@@ -16,3 +16,16 @@ arr [3][4]=addr
 pprint.pprint(arr)
 #arr.insert(([4][1]),0x0000DFE6)
 pprint.pprint(arr)
+print('latest cache')
+cache =[[0 for p in range (9)] for q in range(2**5)]
+pprint.pprint(cache)
+cache[6][7]=addr
+pprint.pprint(cache)
+
+#eviction 
+def eviction(array,row,col):
+    import math
+    array[row][col]=0x00000000
+
+eviction(cache,6,7)
+pprint.pprint(cache)
