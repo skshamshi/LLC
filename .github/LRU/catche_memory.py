@@ -9,13 +9,21 @@ def address_mapping (address):
   byte_select_bits = str (result[26:32])
   return tag_bits,index,byte_select_bits
 
-# variables to choose numbre of sets and aasociativity
+# variables to choose number of sets and aasociativity
 Sets = 3
 Associative = 8 
 
 #calling address mapping function with random address in trace file
 Tag,Index,Byteselect = address_mapping ("1ABCDEF0")
 Tag_decimal = int(Tag,2)
+Tag_decimal2 = 270
+Tag_decimal3 = 271
+Tag_decimal4 = 272
+Tag_decimal5 = 273
+Tag_decimal6 = 274
+Tag_decimal7 = 275
+Tag_decimal8 = 276
+Tag_decimal9 = 277
 #Index_decimal = int(Tag,2)
 Index_decimal = 1
 
@@ -46,30 +54,44 @@ for i in range (1,Sets):
       i.LINES.append (j)
    cache.append(i)
 
-#for set_obj in (cache):             #set objects
-     #print("first set done")
-     #print (set_obj.SET)
-     #for line_obj in (set_obj.SET[1]):    #line objest
-       #print(line_obj.LINE)
-   #print (obj)
-def Hit_or_Miss (Index_decimal):
+
+def Hit_or_Miss (Index_decimal,Tag_decimal):
    if (Index_decimal > Sets):
       print ("out of cache bound")
    else:
       selected_set = cache [Index_decimal]
-      print (selected_set)
-      for line_obj in (selected_set.LINES): 
-            #print (line_obj.LINE)
+      lines_count = 0
+      for line_obj in (selected_set.LINES):
+            lines_count += 1
             if(line_obj.MESI == "0"):
                line_obj.TAG = Tag_decimal
-               print (line_obj.TAG)
+               line_obj.MESI = "1"
                break
-            ###
-               #line__wrote = 1
+            elif(line_obj.MESI == "1" and line_obj.TAG ==Tag_decimal):
+                  print ("super HIT")
+                  break
+            if (lines_count == 8):
+               print("calling LRU")
 
-           
-               #print (line_obj.TAG)
 
 #cache [Index_decimal]
-Hit_or_Miss(Index_decimal)
+Hit_or_Miss(Index_decimal,Tag_decimal)
+Hit_or_Miss(Index_decimal,Tag_decimal)
+Hit_or_Miss(Index_decimal,Tag_decimal2)
+Hit_or_Miss(Index_decimal,Tag_decimal2)
+Hit_or_Miss(Index_decimal,Tag_decimal3)
+Hit_or_Miss(Index_decimal,Tag_decimal3)
+Hit_or_Miss(Index_decimal,Tag_decimal4)
+Hit_or_Miss(Index_decimal,Tag_decimal4)
+Hit_or_Miss(Index_decimal,Tag_decimal5)
+Hit_or_Miss(Index_decimal,Tag_decimal5)
+Hit_or_Miss(Index_decimal,Tag_decimal6)
+Hit_or_Miss(Index_decimal,Tag_decimal6)
+Hit_or_Miss(Index_decimal,Tag_decimal7)
+Hit_or_Miss(Index_decimal,Tag_decimal7)
+Hit_or_Miss(Index_decimal,Tag_decimal8)
+Hit_or_Miss(Index_decimal,Tag_decimal8)
+Hit_or_Miss(Index_decimal,Tag_decimal9)
+Hit_or_Miss(Index_decimal,Tag_decimal9)
+
 #print(Tag_decimal)
