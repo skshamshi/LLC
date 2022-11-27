@@ -1,0 +1,10 @@
+4 5D100C # change modified to shared, bus operation is flush, bus WRITE
+4 5D100C # stay in shared
+5 5D100C # stay in shared, someone is flushing
+6 5D100C # change shared to invalid
+3 5D100C # stay in invalid
+4 BDC006 # stay in invalid
+6 E7FF0D1 # stay in invalid
+6 D42C9E1 # change modified to invalid, bus operation is flush, bus write
+4 EC4D9F2 # change exclusive to shared
+
