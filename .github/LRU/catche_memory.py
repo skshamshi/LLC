@@ -1,3 +1,11 @@
+#import os
+#filename1 = "c:\Users\student\Desktop\Project final\LLC\.github\LRU\catche_memory.py"
+#filename = input("enter path")
+#print (filename)
+
+#(filename)
+#print (filename)
+
 #mapping of address 
 #commit comment
 def address_mapping (address):
@@ -27,7 +35,7 @@ Tag_decimal8 = 276
 Tag_decimal9 = 277
 #Index_decimal = int(Tag,2)
 Index_decimal = 1
-
+#commit test
 #creating empty cache memory
 cache = []
 
