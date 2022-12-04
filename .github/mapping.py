@@ -9,4 +9,4 @@ def address_mapping (address):
   return tag_bits,index,byte_select_bits
      
 Tag,Index,Byteselect = address_mapping ("1ABCDEF0")
-print (Tag)
+print (Tag,Index)
