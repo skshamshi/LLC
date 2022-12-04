@@ -62,14 +62,18 @@ def Hit_or_Miss (Index_decimal,Tag_decimal):
    else:
       selected_set = cache [Index_decimal]
       lines_count = 0
+      Invalid_lines_count = 0
       for line_obj in (selected_set.LINES):
             lines_count += 1
             if(line_obj.MESI == "0"):
+               Invalid_lines_count += 1
+               if (line_obj.TAG != Tag_decimal):
+                  continue
                line_obj.TAG = Tag_decimal
                line_obj.MESI = "1"
                break
             elif(line_obj.MESI == "1" and line_obj.TAG ==Tag_decimal):
-                  print ("super HIT")
+                  print ("HIT")
                   break
             if (lines_count == 8):
                print("calling LRU")
