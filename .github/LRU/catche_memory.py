@@ -31,14 +31,14 @@ Index_decimal = 1
 #creating empty cache memory
 cache = []
 
-# line_class
+# line class
 class line:
    def __init__ (self,MESI,TAG):
       self.MESI = MESI
       self.TAG = TAG
       self.LINE = [MESI,TAG]
 
-# set_class
+# set class
 class set:
    def __init__(self,LRU,LINES):
       self.LRU = LRU
