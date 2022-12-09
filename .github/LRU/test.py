@@ -1,10 +1,16 @@
 from os import popen
-file = r"C:\Users\student\Desktop\Project final\LLC\.github\LRU\trace2.txt"
-file_pointer = open (file)
-#print (x,end='') # to aviode extra lines while priniting from  file
-for x in file_pointer:
-    trace_lines = x
-    trace_lines = trace_lines.strip()
-    palli = trace_lines.split(" ")
-    print (palli[1])
-   
+import os
+txt = ".txt"
+basepath = r"C:\Users\student\Downloads\Archive"
+path = []
+for fname in os.listdir(basepath):
+    if os.path.isdir(fname):
+      continue
+    path.append(os.path.join(basepath, fname))
+    fname = fname+txt
+    with open(os.path.join(basepath,fname),'w') as f:
+        f.write("hello")
+
+
+
+        
