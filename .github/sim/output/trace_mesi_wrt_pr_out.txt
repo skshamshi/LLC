@@ -1,0 +1,7 @@
+L2: SENDLINE  BusOp: READ  Snoop Result: HIT  Address: 45ADFC0 
+L2: SENDLINE  Address: 45ADFC0 
+L2: SENDLINE  Address: 45ADFF3 
+L2: SENDLINE  BusOp: READ  Snoop Result: NOHIT  Address: 45ADFB3 
+L2: SENDLINE  Address: 45ADFB1 
+L2: SENDLINE  Address: 45ADFB1 
+BusOp: RWIM  Snoop Result: HITM  Address: D38DF301 
